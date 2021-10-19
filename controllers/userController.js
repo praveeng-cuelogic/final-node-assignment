@@ -7,18 +7,31 @@ const config = require('../config/index');
 
 async function authenticateUser({username, password}) {
 
-    //console.log(username);
+    const user = await User.findOne({ username });
+    //console.log(user);
 
-    const user = await User.findOne({username, password});
-    //const user = await User.findByCredentials(username, password);
     const secret = config.JWTSecret;
-    if (user && bcrypt.compareSync(password, user.password)) {
+    /* if(user){
+        bcrypt.compare(password, user.password).then(match => {
+            if(match){
+                const token = jwt.sign({sub: user.id}, secret, {expiresIn: '5d'});
+                return {
+                    ...user.toJSON(),
+                    token
+                };
+            }
+        });
+    } */
+
+    if (user && bcrypt.compare(password, user.password)) {
         const token = jwt.sign({sub: user.id}, secret, {expiresIn: '5d'});
         return {
             ...user.toJSON(),
             token
         };
     }
+
+    //res.status(400).send("Invalid Credentials");
 }
 
 async function createUser(userParam) {

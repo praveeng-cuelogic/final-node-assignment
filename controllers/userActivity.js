@@ -1,7 +1,7 @@
-const db = require('config/db');
+const db = require('../config/db');
 const UserActivity = db.UserActivity;
 
-function createUserActivity(req, userId, comment) {
+async function createUserActivity(req, userId) {
     let ua = req.get('User-Agent');
     let ip = req.ip;
     if (!ip) throw 'IP address not found';
@@ -9,17 +9,19 @@ function createUserActivity(req, userId, comment) {
     if (ip && ua) {
         let activity = new UserActivity({
             ip: ip,
-            ua: ua,
-            userid: userId,
-            comment: (comment ? comment : "")
+            userAgent: ua,
+            user: userId,
+            //loggedInDate: new Date 
+            //comment: (comment ? comment : "")
         })
-        activity.save()
+        await activity.save();
+        /* activity.save()
             .then(doc => {
                 console.log(doc)
             })
             .catch(err => {
                 console.error(err)
-            })
+            }) */
     }
 }
 

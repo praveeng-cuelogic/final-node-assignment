@@ -14,19 +14,25 @@ router.put('/:id', update);
 router.get('/notloggedin/users', getNotLoggedIn);
 
 function authenticate(req, res, next) {
-    //console.log(req.body);
-    //const user = new User({ username, password});
-    //const { username, password } = req.body;
+
+    console.log(req.body);
+    const { username, password } = req.body;
+    if (!(username && password)) {
+        res.status(400).send("All input is required");
+    }
 
     userService.authenticateUser(req.body)
-        .then(user => {
+        .then((user) => {
             if (user) {
-                res.json(user);
+                res.status(200).json(user);
                 return UserActivity(req, user._id);
             } else {
                 res.status(400).json({message: 'Username or password is incorrect!'})
             }
-        })
+        }) 
+        /* .then(() => {
+            res.status(200).json({"message": "Valid!"});
+        }) */
         .catch(err => next(err));
 }
 

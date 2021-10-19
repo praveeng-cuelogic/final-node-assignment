@@ -12,6 +12,10 @@ MongoDB
 
 Resoruces link:
 
+
+Authentication-api-with-jwt-token: https://www.section.io/engineering-education/how-to-build-authentication-api-with-jwt-token-in-nodejs/
+
+
 1- https://github.com/LoginRadius/engineering-blog-samples/tree/master/NodeJs
 https://www.youtube.com/watch?v=_EP2qCmLzSE
 

@@ -19,7 +19,7 @@ const usersActivitySchema = new Schema({
   },
   loggedInDate: {
     type: Date,
-    required: true,
+    //required: true,
     default: Date.now
   },
 });

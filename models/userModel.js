@@ -43,7 +43,7 @@ userSchema.methods.joiValidate = function(obj) {
 	return Joi.validate(obj, schema);
 }
 
-userSchema.pre('save', function (next) {
+/* userSchema.pre('save', function (next) {
   const user = this;
   if (!this.isModified || !this.isNew) {
     next();
@@ -58,7 +58,7 @@ userSchema.pre('save', function (next) {
       }
     });
   }
-});
+}); */
 
 /* UserSchema.methods.comparePassword = function (passw, cb) {
   bcrypt.compare(passw, this.password, function (err, isMatch) {
