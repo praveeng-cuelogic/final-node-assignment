@@ -19,9 +19,9 @@ npm start
 
 Your app should now be running on [localhost:8088](http://localhost:8088/).
 
-### What I used?
-- Node
-- Express
+### What I use?
+- NodeJs
+- ExpressJs
 - MongoDB
 - Mongoose
 - Nodemon
