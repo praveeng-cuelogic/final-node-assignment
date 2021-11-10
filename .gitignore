@@ -7,7 +7,7 @@
 #.env
 
 # notrequired
-/vscode
+/.vscode
 
 # testing
 /coverage
