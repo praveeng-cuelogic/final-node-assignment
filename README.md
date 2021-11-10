@@ -1,8 +1,8 @@
-## User Sign In & Sign Up Application w/ NodeJS
+## Employee schema Application w/ NodeJS
 
 # node-js-sample
 
-A User Node.js app using [Express 4](http://expressjs.com/).
+A Employee schema Node.js app using [Express 4](http://expressjs.com/).
 
 ### App Description
 This is a simple User Sign In & Sign Up demo project using all I learned
