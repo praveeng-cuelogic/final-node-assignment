@@ -1,32 +1,37 @@
-## Node Assignment
+## User Sign In & Sign Up Application w/ NodeJS
 
-Step 1: Clone the repo
-git clone https://github.com/praveeng-cuelogic/node-assignment-14-10-21.git
+# node-js-sample
 
-## What I used?
-Node
-Express
-MongoDB
+A User Node.js app using [Express 4](http://expressjs.com/).
 
+### App Description
+This is a simple User Sign In & Sign Up demo project using all I learned
 
+## Running Locally
 
-Resoruces link:
+Make sure you have [Node.js](http://nodejs.org/) installed.
 
+```sh
+git clone https://github.com/praveeng-cuelogic/final-node-assignment.git # or clone your own fork
+npm install
+npm start
+```
 
-Authentication-api-with-jwt-token: https://www.section.io/engineering-education/how-to-build-authentication-api-with-jwt-token-in-nodejs/
+Your app should now be running on [localhost:8088](http://localhost:8088/).
 
+### What I used?
+- Node
+- Express
+- MongoDB
+- Mongoose
+- Nodemon
 
-1- https://github.com/LoginRadius/engineering-blog-samples/tree/master/NodeJs
-https://www.youtube.com/watch?v=_EP2qCmLzSE
+### How Can I Start?
 
-https://github.com/gothinkster/node-express-realworld-example-app/blob/master/routes/api/users.js
-https://github.com/rwieruch/minimal-node-application
-http://www.passportjs.org/docs/authenticate/
+<pre>npm install</pre>
+then
+<pre>npm start</pre>
 
-
-DB:
-
-https://levelup.gitconnected.com/how-to-set-up-scheduled-mongodb-backups-with-a-bit-of-node-js-b81abebfa20
-https://jasonwatmore.com/post/2019/09/03/mongodb-how-to-backup-and-restore-a-database
-https://stackoverflow.com/questions/10081452/how-to-drop-a-database-with-mongoose
-https://docs.cloudmanager.mongodb.com/tutorial/restore-single-database/
+### Package Version?
+- NPM: 7.24.0
+- Node: v16.10.0

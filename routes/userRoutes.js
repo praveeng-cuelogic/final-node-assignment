@@ -8,14 +8,15 @@ const User = require('../models/userModel');
 
 router.post('/signup', /* [validateMiddleWare(validateUser)], */ signUp);
 router.post('/authenticate', authenticate);
-router.get('/', getAllUsers);
+router.get('/getall', getAllUsers);
 router.get('/:id', getById);
 router.put('/:id', update);
 router.get('/notloggedin/users', getNotLoggedIn);
 
 function authenticate(req, res, next) {
 
-    console.log(req.body);
+    //console.log(req.body);
+
     const { username, password } = req.body;
     if (!(username && password)) {
         res.status(400).send("All input is required");
@@ -45,6 +46,9 @@ function signUp(req, res, next) {
 }
 
 function getAllUsers(req, res, next) {
+
+    console.log(users);
+
     userService.getAll()
         .then(users => {
             res.json(users)

@@ -2,8 +2,10 @@
   "name": "node-assignment",
   "version": "1.0.0",
   "description": "Step 1: Clone the repo git clone https://github.com/praveeng-cuelogic/node-assignment-14-10-21.git",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
+    "start-server": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/js"
   },

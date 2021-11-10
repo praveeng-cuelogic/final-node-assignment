@@ -61,6 +61,7 @@ async function updateUser(id, userParam) {
 }
 
 async function getAll() {
+    
     return await User.find();
 }
 

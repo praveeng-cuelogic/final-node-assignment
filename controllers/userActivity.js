@@ -14,14 +14,16 @@ async function createUserActivity(req, userId) {
             //loggedInDate: new Date 
             //comment: (comment ? comment : "")
         })
-        await activity.save();
-        /* activity.save()
+
+        console.log(activity);
+
+        activity.save()
             .then(doc => {
                 console.log(doc)
             })
             .catch(err => {
                 console.error(err)
-            }) */
+            })
     }
 }
 
